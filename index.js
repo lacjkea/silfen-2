@@ -11,8 +11,10 @@ function showBags(bags) {
   const clone = shCard.cloneNode(true);
   clone.querySelector(".name").textContent = bags.name;
   clone.querySelector("img").src =
-    bags._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+    bags._embedded[
+      "wp:featuredmedia"
+    ][0].media_details.sizes.medium_large.source_url; /* lacj */
   clone.querySelector(".price").textContent = bags.price;
-  const parent = document.querySelector(".container");
+  const parent = document.querySelector(".container"); /* lacj */
   parent.appendChild(clone);
 }
